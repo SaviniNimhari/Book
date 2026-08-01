@@ -1,4 +1,4 @@
-# Library Management System - C++
+# Library Management System 
 
 This project implements a simple library management system using C++ and object-oriented programming.
 
