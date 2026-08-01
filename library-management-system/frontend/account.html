@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Account</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body data-page="account" class="page-body page-account">
+  <main class="page-shell">
+    <header class="page-header">
+      <div class="page-header-content">
+        <div>
+          <p class="eyebrow">Library Dashboard</p>
+          <h1 class="page-title">Account</h1>
+        </div>
+        <nav class="page-nav">
+          <a data-nav="home" href="index.html" class="nav-link">Home</a>
+          <a data-nav="login" href="login.html" class="nav-link">Login</a>
+          <a data-nav="account" href="account.html" class="nav-link">Account</a>
+          <a data-nav="cart" href="cart.html" class="nav-link">Cart</a>
+          <a data-nav="cards" href="cards.html" class="nav-link">Cards</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="two-column-layout">
+      <div class="panel">
+        <h2 class="section-title">Member Profile</h2>
+        <p class="section-text">Account details loaded from JSON.</p>
+        <div id="account-card" class="content-panel"></div>
+      </div>
+
+      <div class="panel">
+        <h3 class="section-title">Recent Activity</h3>
+        <div id="activity-feed" class="stack-list"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

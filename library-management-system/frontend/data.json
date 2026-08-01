@@ -1,0 +1,44 @@
+{
+  "stats": [
+    { "label": "Total Books", "value": "4" },
+    { "label": "Borrowed", "value": "1" },
+    { "label": "Available", "value": "3" }
+  ],
+  "books": [
+    { "id": 101, "title": "Clean Code", "author": "Robert C. Martin", "isBorrowed": false },
+    { "id": 102, "title": "The Pragmatic Programmer", "author": "Andrew Hunt", "isBorrowed": true },
+    { "id": 103, "title": "Atomic Habits", "author": "James Clear", "isBorrowed": false },
+    { "id": 104, "title": "Introduction to Algorithms", "author": "Thomas H. Cormen", "isBorrowed": false }
+  ],
+  "featuredBooks": [
+    { "id": 101, "title": "Clean Code", "author": "Robert C. Martin", "status": "Available" },
+    { "id": 102, "title": "The Pragmatic Programmer", "author": "Andrew Hunt", "status": "Borrowed" },
+    { "id": 103, "title": "Atomic Habits", "author": "James Clear", "status": "Available" }
+  ],
+  "cart": [
+    { "title": "The Pragmatic Programmer", "author": "Andrew Hunt", "status": "Borrowed" }
+  ],
+  "account": {
+    "name": "Amina Khan",
+    "memberId": "LM-2048",
+    "plan": "Premium Reader",
+    "joined": "2025-08-12"
+  },
+  "activity": [
+    "Borrowed The Pragmatic Programmer yesterday",
+    "Returned an old record this week",
+    "File handling keeps the library state persistent"
+  ],
+  "loginCards": [
+    { "title": "Fast Sign In", "description": "Quick authentication for members." },
+    { "title": "Saved Account", "description": "Store member details for faster access." },
+    { "title": "Secure Session", "description": "Simple protected dashboard preview." }
+  ],
+  "cards": [
+    { "title": "Home Overview", "description": "Quick summary of library activity and important numbers.", "tag": "home" },
+    { "title": "Member Account", "description": "Profile information, membership tier, and saved preferences.", "tag": "account" },
+    { "title": "Borrowed Items", "description": "Books currently checked out by the user.", "tag": "cart" },
+    { "title": "Login Access", "description": "Secure sign-in panel for the dashboard.", "tag": "login" },
+    { "title": "Library Cards", "description": "Compact action cards for browsing and checkout.", "tag": "cards" }
+  ]
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: { 950: '#06111f', 900: '#0b1726', 800: '#11233a' },
+            aqua: '#2dd4bf'
+          },
+          boxShadow: { glow: '0 20px 60px rgba(45, 212, 191, 0.18)' }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body data-page="home" class="min-h-screen bg-ink-950 text-slate-100">
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-24 left-[-4rem] h-80 w-80 rounded-full bg-aqua/20 blur-3xl"></div>
+    <div class="absolute top-40 right-[-4rem] h-96 w-96 rounded-full bg-sky-400/10 blur-3xl"></div>
+  </div>
+
+  <main class="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-6 px-4 py-6 lg:px-6">
+    <header class="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-glow backdrop-blur-xl lg:p-6">
+      <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-aqua/90">Library Dashboard</p>
+          <h1 class="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Home</h1>
+          <p class="mt-3 max-w-2xl text-sm leading-6 text-slate-300">A Tailwind CSS home page for the library dashboard with featured books, quick links, and backend-driven status.</p>
+        </div>
+        <nav class="flex flex-wrap gap-3">
+          <a data-nav="home" href="index.html" class="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-aqua/40 hover:bg-white/10">Home</a>
+          <a data-nav="login" href="login.html" class="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-aqua/40 hover:bg-white/10">Login</a>
+          <a data-nav="account" href="account.html" class="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-aqua/40 hover:bg-white/10">Account</a>
+          <a data-nav="cart" href="cart.html" class="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-aqua/40 hover:bg-white/10">Cart</a>
+          <a data-nav="cards" href="cards.html" class="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-aqua/40 hover:bg-white/10">Cards</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="grid gap-6 lg:grid-cols-[1.35fr_0.85fr]">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl lg:p-8">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.24em] text-aqua/80">Home Overview</p>
+            <h2 class="mt-2 text-2xl font-semibold text-white">Today's library snapshot</h2>
+            <p class="mt-2 max-w-xl text-sm leading-6 text-slate-300">Tailwind-based cards show the live catalog summary and the latest books exported by the C++ backend.</p>
+          </div>
+          <span class="inline-flex items-center rounded-full border border-aqua/30 bg-aqua/10 px-4 py-2 text-sm text-aqua">JSON backend bridge</span>
+        </div>
+
+        <div id="stats" class="mt-6 grid gap-4 sm:grid-cols-3"></div>
+
+        <div class="mt-8">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-white">Featured Books</h3>
+            <p class="text-sm text-slate-400">Loaded from JSON</p>
+          </div>
+          <div id="featured-books" class="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3"></div>
+        </div>
+      </div>
+
+      <aside class="grid gap-6">
+        <section class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl">
+          <h3 class="text-lg font-semibold text-white">Quick Links</h3>
+          <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+            <a href="login.html" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white transition hover:border-aqua/40 hover:bg-white/10">Open Login</a>
+            <a href="account.html" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white transition hover:border-aqua/40 hover:bg-white/10">Open Account</a>
+            <a href="cart.html" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white transition hover:border-aqua/40 hover:bg-white/10">Open Cart</a>
+            <a href="cards.html" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white transition hover:border-aqua/40 hover:bg-white/10">Open Cards</a>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl">
+          <h3 class="text-lg font-semibold text-white">Backend Note</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-300">The C++ program writes <span class="text-aqua">data/library.json</span>, which the pages read for live book status.</p>
+        </section>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

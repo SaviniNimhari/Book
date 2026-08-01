@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Cards</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body data-page="cards" class="page-body page-cards">
+  <main class="page-shell">
+    <header class="page-header">
+      <div class="page-header-content">
+        <div>
+          <p class="eyebrow">Library Dashboard</p>
+          <h1 class="page-title">Cards</h1>
+        </div>
+        <nav class="page-nav">
+          <a data-nav="home" href="index.html" class="nav-link">Home</a>
+          <a data-nav="login" href="login.html" class="nav-link">Login</a>
+          <a data-nav="account" href="account.html" class="nav-link">Account</a>
+          <a data-nav="cart" href="cart.html" class="nav-link">Cart</a>
+          <a data-nav="cards" href="cards.html" class="nav-link">Cards</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="cards-toolbar">
+        <div>
+          <h2 class="section-title">Book Cards</h2>
+          <p class="section-text">Search the dashboard cards rendered from JSON.</p>
+        </div>
+        <input id="search-box" type="text" placeholder="Search cards" class="text-input search-input" />
+      </div>
+      <div id="all-cards" class="card-grid"></div>
+    </section>
+  </main>
+</body>
+</html>

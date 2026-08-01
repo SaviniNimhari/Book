@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body data-page="cart" class="page-body page-cart">
+  <main class="page-shell">
+    <header class="page-header">
+      <div class="page-header-content">
+        <div>
+          <p class="eyebrow">Library Dashboard</p>
+          <h1 class="page-title">Cart</h1>
+        </div>
+        <nav class="page-nav">
+          <a data-nav="home" href="index.html" class="nav-link">Home</a>
+          <a data-nav="login" href="login.html" class="nav-link">Login</a>
+          <a data-nav="account" href="account.html" class="nav-link">Account</a>
+          <a data-nav="cart" href="cart.html" class="nav-link">Cart</a>
+          <a data-nav="cards" href="cards.html" class="nav-link">Cards</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="two-column-layout">
+      <div class="panel">
+        <h2 class="section-title">Borrowed Books</h2>
+        <p class="section-text">These items are pulled from the C++ backend snapshot.</p>
+        <div id="cart-items" class="stack-list"></div>
+      </div>
+
+      <div class="panel">
+        <h3 class="section-title">Cart Summary</h3>
+        <div id="cart-summary" class="stack-list"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
